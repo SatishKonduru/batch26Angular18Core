@@ -1,7 +1,7 @@
 
 @import "../node_modules/@fontsource/poppins/index.css";
 
-body{
+body, *{
     font-family: 'Poppins', sans-serif;
 }
 
