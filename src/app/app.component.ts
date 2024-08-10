@@ -9,6 +9,7 @@ import { ClassBindingComponent } from "./components/class-binding/class-binding.
 
 
 
+
 @Component({
   selector: 'app-root', 
   standalone: true,
