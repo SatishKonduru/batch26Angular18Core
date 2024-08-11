@@ -1,0 +1,36 @@
+<div style="display: flex; justify-content: center;">
+    <p style="font-size: 25px; color: brown;">Template Reference Variables</p>
+</div>
+<mat-divider></mat-divider>
+<div style="display: flex; justify-content: center;">
+    <div style="margin-top: 10px;">
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your name:</mat-label>
+                <input matInput #inputValue>
+           </mat-form-field>
+           <mat-form-field appearance="outline">
+            <mat-label>Enter Place:</mat-label>
+            <input matInput [(ngModel)] = "myPlace">
+       </mat-form-field>
+           
+        </div>
+        <button mat-flat-button (click) ="getName(inputValue.value)" style="background-color: blueviolet; color: #fff">Display Name</button> 
+
+        <button mat-flat-button (click) ="clearName()" style="background-color: brown; color: #fff">Clear Name</button>
+        <div>
+            My Name is: {{name}}
+        </div>
+        <div>
+            My Place is: <h2>{{myPlace}}</h2>
+        </div>
+    </div>
+   
+    
+    <!-- <button mat-button>Display Name</button>
+    <button mat-raised-button>Display Name</button>
+    <button mat-stroked-button>Display Name</button>
+    <button mat-icon-button><mat-icon>home</mat-icon></button>
+    <button mat-fab style="background-color: brown;"><mat-icon style="color: white; ">home</mat-icon></button>
+    <button mat-mini-fab style="background-color: brown;"><mat-icon style="color: white; ">home</mat-icon></button> -->
+</div>
