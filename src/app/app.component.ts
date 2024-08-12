@@ -8,6 +8,7 @@ import { StyleBindingComponent } from "./components/style-binding/style-binding.
 import { ClassBindingComponent } from "./components/class-binding/class-binding.component";
 import { EventBindingComponent } from "./components/event-binding/event-binding.component";
 import { TempRefVariablesComponent } from "./components/temp-ref-variables/temp-ref-variables.component";
+import { IfComponent } from "./components/if/if.component";
 
 
 
@@ -15,7 +16,7 @@ import { TempRefVariablesComponent } from "./components/temp-ref-variables/temp-
 @Component({
   selector: 'app-root', 
   standalone: true,
-  imports: [RouterOutlet, MatButtonModule, HeaderComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent],
+  imports: [RouterOutlet, MatButtonModule, HeaderComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, IfComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   preserveWhitespaces: true 

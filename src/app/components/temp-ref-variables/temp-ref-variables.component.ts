@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [MatDividerModule, CommonModule, MatFormFieldModule, MatInputModule, MatButtonModule, FormsModule],
   templateUrl: './temp-ref-variables.component.html',
-  styleUrl: './temp-ref-variables.component.css'
+  styleUrl: './temp-ref-variables.component.css',
 })
 export class TempRefVariablesComponent {
   name: string = ''

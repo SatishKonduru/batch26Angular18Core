@@ -1,0 +1,46 @@
+<div style="display: flex; justify-content: center;" >
+    <p style="font-size: 25px; color: brown;">Structural Directive: if</p>
+</div>
+<mat-divider></mat-divider>
+
+<!-- <div style="justify-content: center;" *ngIf="show">
+    <h4>
+        name: {{student.name}}
+    </h4>
+    <h4 >
+        Course: {{student.course}}
+    </h4>
+</div> -->
+
+
+    <!-- <div style="justify-content: center;">
+        <h4 *ngIf="show else else2 ">
+            name: {{student.name}}
+        </h4>
+    </div>
+    <ng-template #else1>
+        No Data Found 1
+    </ng-template>
+    <ng-template #else2>
+        No Data Found 2
+    </ng-template>
+    <ng-template #else3>
+        No Data Found 3
+    </ng-template> -->
+    
+    @if(score <= 10){
+        <h2>Fail</h2>
+    }
+    @else if(score > 20 && score <= 40){
+        <h2>Third Class</h2>
+    }
+    @else if(score > 40 && score < 60){
+        <h2>Second Class</h2>
+    }
+    @else if(score > 60 && score < 75){
+        <h2>First Class</h2>
+    }
+    @else {
+        <h2>Distinction</h2>
+    }
+
