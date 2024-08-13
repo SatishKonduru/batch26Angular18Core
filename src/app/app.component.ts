@@ -9,6 +9,7 @@ import { ClassBindingComponent } from "./components/class-binding/class-binding.
 import { EventBindingComponent } from "./components/event-binding/event-binding.component";
 import { TempRefVariablesComponent } from "./components/temp-ref-variables/temp-ref-variables.component";
 import { IfComponent } from "./components/if/if.component";
+import { SwitchCaseComponent } from "./components/switch-case/switch-case.component";
 
 
 
@@ -16,7 +17,7 @@ import { IfComponent } from "./components/if/if.component";
 @Component({
   selector: 'app-root', 
   standalone: true,
-  imports: [RouterOutlet, MatButtonModule, HeaderComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, IfComponent],
+  imports: [RouterOutlet, MatButtonModule, HeaderComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, IfComponent, SwitchCaseComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   preserveWhitespaces: true 

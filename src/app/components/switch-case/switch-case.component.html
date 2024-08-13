@@ -1,0 +1,50 @@
+<div style="display: flex; justify-content: center;" >
+    <p style="font-size: 25px; color: brown;">Structural Directive: Switch...Case</p>
+</div>
+<mat-divider></mat-divider>
+<!-- before Angualr 17 (<=16) -->
+ <div [ngSwitch]="day">
+
+    <div *ngSwitchCase = "0">
+        <h3>Sunday</h3>
+    </div>
+    <div *ngSwitchCase = "1">
+        <h3>Monday</h3>
+    </div>
+    <div *ngSwitchCase = "2">
+        <h3>Tuesday</h3>
+    </div>
+    <div *ngSwitchCase = "3">
+        <h3>Wednesday</h3>
+    </div>
+    <div *ngSwitchCase = "4">
+        <h3>Thursday</h3>
+    </div>
+    <div *ngSwitchCase = "5">
+        <h3>Friday</h3>
+    </div>
+    <div *ngSwitchCase = "6">
+        <h3>Saturday</h3>
+    </div>
+    <div *ngSwitchDefault>
+        <h3>Invalid Choice</h3>
+    </div>
+ </div>
+<mat-divider></mat-divider>
+ @switch (color) {
+    @case ('white') {
+        <h3>Sunday</h3>
+    }
+    @case ('rose') {
+        <h3>Monday</h3>
+    }
+    @case ('black') {
+        <h3>Tuesday</h3>
+    }
+    @case ('pink') {
+        <h3>Wednesday</h3>
+    }
+    @default {
+        <h3>Invalid Choice</h3>
+    }
+ }
