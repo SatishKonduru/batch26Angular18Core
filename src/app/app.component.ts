@@ -10,6 +10,7 @@ import { EventBindingComponent } from "./components/event-binding/event-binding.
 import { TempRefVariablesComponent } from "./components/temp-ref-variables/temp-ref-variables.component";
 import { IfComponent } from "./components/if/if.component";
 import { SwitchCaseComponent } from "./components/switch-case/switch-case.component";
+import { ForComponent } from './components/for/for.component';
 
 
 
@@ -17,7 +18,7 @@ import { SwitchCaseComponent } from "./components/switch-case/switch-case.compon
 @Component({
   selector: 'app-root', 
   standalone: true,
-  imports: [RouterOutlet, MatButtonModule, HeaderComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, IfComponent, SwitchCaseComponent],
+  imports: [RouterOutlet, MatButtonModule, HeaderComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, IfComponent, SwitchCaseComponent, ForComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   preserveWhitespaces: true 

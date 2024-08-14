@@ -1,0 +1,42 @@
+<div style="display: flex; justify-content: center;">
+    <p style="font-size: 25px; color: brown;">for</p>
+</div>
+<mat-divider></mat-divider>
+
+<!-- upto Angular version16 -->
+<!-- <div *ngFor="let x of numbers">
+    <h3>{{x}}</h3>
+</div> -->
+
+@for(x of numbers; track x){
+    <h3>{{x}}</h3>
+}
+
+<mat-divider></mat-divider>
+
+@for(p of persons; track p; let i = $index){
+    <h3>{{p.name}} is at index: {{i}}</h3>
+}
+
+<mat-divider></mat-divider>
+@for(p of persons; track p; let f = $first){
+    <h3>{{p.name}} --- > {{f}}</h3>
+}
+
+<mat-divider></mat-divider>
+@for(p of persons; track p; let l = $last){
+    <h3>{{p.name}} --- > {{l}}</h3>
+}
+
+<mat-divider></mat-divider>
+@for(p of persons; track p; let e = $even){
+    <h3>{{p.name}} --- > {{e}}</h3>
+}
+
+<mat-divider></mat-divider>
+@for(p of persons; track p; let o = $odd){
+    <h3>{{p.name}} --- > {{o}}</h3>
+}
+@empty {
+    No Data found
+}
