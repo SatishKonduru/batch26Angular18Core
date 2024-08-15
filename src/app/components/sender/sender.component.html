@@ -1,0 +1,18 @@
+<div style="display: flex; justify-content: center;">
+    <p style="font-size: 25px; color: brown;">Component Communication</p>
+</div>
+<mat-divider></mat-divider>
+
+<div class="container d-flex gap-5">
+    <div style="width: 500px; height: 500px; background-color: bisque;">
+        <div class="p-3">
+                <h4><u>Sender Component</u></h4>
+                <h5>Message from Child(receiver): {{msg}}</h5> 
+        </div>
+    </div>
+    <div style="width: 500px; height: 500px; background-color: plum;">
+        <div class="p-3">
+            <app-receiver (receiverCompData)="msg=$event" [postman]="message"></app-receiver>
+        </div>
+    </div>
+</div>
