@@ -1,0 +1,10 @@
+<p>contentparent works!</p>
+<button class="btn btn-success" (click)="getChildData()">get Child Property</button>
+<h1>{{cData}}</h1>
+
+<hr>
+
+@for(item of cArray; track item){
+    <h2>{{item}}</h2>
+}
+<ng-content></ng-content>

@@ -14,6 +14,8 @@ import { ForComponent } from './components/for/for.component';
 import { SenderComponent } from "./components/sender/sender.component";
 import { ViewChildComponent } from "./components/view-child/view-child.component";
 import { ParentComponent } from "./components/parent/parent.component";
+import { ContentparentComponent } from "./components/contentparent/contentparent.component";
+import { ContentChildComponent } from "./components/content-child/content-child.component";
 
 
 
@@ -21,7 +23,7 @@ import { ParentComponent } from "./components/parent/parent.component";
 @Component({
   selector: 'app-root', 
   standalone: true,
-  imports: [RouterOutlet, MatButtonModule, HeaderComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, IfComponent, SwitchCaseComponent, ForComponent, SenderComponent, ViewChildComponent, ParentComponent],
+  imports: [RouterOutlet, MatButtonModule, HeaderComponent, InterpolationComponent, PropertyBindingComponent, StyleBindingComponent, ClassBindingComponent, EventBindingComponent, TempRefVariablesComponent, IfComponent, SwitchCaseComponent, ForComponent, SenderComponent, ViewChildComponent, ParentComponent, ContentparentComponent, ContentChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   preserveWhitespaces: true 
