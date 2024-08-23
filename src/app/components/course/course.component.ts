@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class CourseComponent {
 
+  courseList = [
+    {id: 1, name: 'Angular', tutor: 'Satish'},
+    {id: 2, name: 'Angular Material', tutor: 'Satish Konduru'},
+    {id: 3, name: 'Bootstrap', tutor: 'RSK'},
+    {id: 4, name: 'NodeJS', tutor: 'Renu'},
+  ]
 }
