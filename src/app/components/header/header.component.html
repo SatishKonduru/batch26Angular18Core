@@ -4,3 +4,11 @@
     <span class="spacer"></span>
     <span><mat-icon>person</mat-icon></span>
 </mat-toolbar>
+<mat-toolbar style="background-color: whitesmoke; color: white; height: 50px;">
+<span>
+    <!-- <button mat-raised-button routerLink = '/course'>Course</button> -->
+    <button mat-raised-button [routerLink] = "'/course'" routerLinkActive="active">Course</button>
+    <!-- <button mat-raised-button routerLink="/courseDetails">Course Details</button> -->
+    <button mat-raised-button [routerLink]="'/courseDetails'" routerLinkActive="active">Course Details</button>
+</span>
+</mat-toolbar>
