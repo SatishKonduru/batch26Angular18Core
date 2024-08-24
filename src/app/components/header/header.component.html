@@ -9,6 +9,6 @@
     <!-- <button mat-raised-button routerLink = '/course'>Course</button> -->
     <button mat-raised-button [routerLink] = "'/course'" routerLinkActive="active">Course</button>
     <!-- <button mat-raised-button routerLink="/courseDetails">Course Details</button> -->
-    <button mat-raised-button [routerLink]="'/courseDetails'" routerLinkActive="active">Course Details</button>
+    <button mat-raised-button [routerLink]="'/courseDetails'" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Course Details</button>
 </span>
 </mat-toolbar>

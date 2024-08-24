@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-details',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './course-details.component.css'
 })
 export class CourseDetailsComponent implements OnInit{
+  router = inject(Router)
   courseList = [
     {id: 1, name: 'Angular', tutor: 'Satish'},
     {id: 2, name: 'Angular Material', tutor: 'Satish Konduru'},
@@ -19,5 +21,8 @@ courseKeys: string[];
    this.courseKeys = Object.keys(this.courseList[0])
  }
 
-
+ onSelect(course: any){
+  console.log("Selected Course: ", course)
+  this.router.navigate(['/selectedCourse', JSON.stringify(course)])
+ }
 }
