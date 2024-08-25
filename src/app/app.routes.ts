@@ -14,7 +14,15 @@ export const routes: Routes = [
         component: CourseDetailsComponent
     },
     {
+        path: 'courseDetails/:id',
+        component: CourseDetailsComponent
+    },
+    {
         path: 'selectedCourse/:course', // Route Parameters
+        component: SelectedCourseComponent
+    },
+    {
+        path: 'selectedCourse',
         component: SelectedCourseComponent
     },
     {
