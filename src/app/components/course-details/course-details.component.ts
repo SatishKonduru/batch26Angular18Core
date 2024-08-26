@@ -32,8 +32,8 @@ selected = 'selected'
 
  onSelect(course: any){
   console.log("Selected Course: ", course)
-  // this.router.navigate(['/selectedCourse', JSON.stringify(course)]) //configuring route parameters
-  this.router.navigate(['/selectedCourse'],{queryParams: {course: JSON.stringify(course) }}) //QueryParams
+  this.router.navigate(['/selectedCourse', JSON.stringify(course)]) //configuring route parameters
+  // this.router.navigate(['/selectedCourse'],{queryParams: {course: JSON.stringify(course) }}) //QueryParams
 }
 
 getSelected(course: any){
