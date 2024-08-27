@@ -10,4 +10,9 @@ span{
     margin-left: 20px ;
     font-size: 14px;
     cursor: pointer;
+    
+}
+a{
+    text-decoration: none;
+    color: chocolate;
 }
