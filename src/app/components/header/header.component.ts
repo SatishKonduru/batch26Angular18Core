@@ -17,14 +17,14 @@ export class HeaderComponent implements OnInit{
   activatedRoute = inject(ActivatedRoute)
 
   ngOnInit(): void {
-    this.activatedRoute.fragment.subscribe(data => {
-      console.log(data)
-      this.jumpToSection(data)
-    })
+    // this.activatedRoute.fragment.subscribe(data => {
+    //   console.log(data)
+    //   this.jumpToSection(data)
+    // })
   }
 
-  jumpToSection(section: any){
-    document.getElementById(section).scrollIntoView({behavior: 'smooth'})
-  }
+  // jumpToSection(section: any){
+  //   document.getElementById(section).scrollIntoView({behavior: 'smooth'})
+  // }
 
 }
