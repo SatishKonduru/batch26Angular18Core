@@ -18,9 +18,12 @@ import {MatInputModule} from '@angular/material/input';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  
-  inputValue: any =""
+  // constructor(){
+  //   console.log('Home Constructor called...')
+  // }
+  inputValue: any = ["Satish"]
   onClick(value: any){
-    this.inputValue = value
+    // this.inputValue = value
+    this.inputValue.push(value)
   }
 }
