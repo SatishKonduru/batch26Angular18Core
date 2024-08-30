@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { AboutusComponent } from "../aboutus/aboutus.component";
 import { ServicesComponent } from "../services/services.component";
 import { ProductsComponent } from "../products/products.component";
@@ -17,13 +17,25 @@ import {MatInputModule} from '@angular/material/input';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-  // constructor(){
-  //   console.log('Home Constructor called...')
-  // }
-  inputValue: any = ["Satish"]
+export class HomeComponent implements OnChanges, OnInit, DoCheck{
+  constructor(){
+    console.log('Home Constructor called...')
+  }
+  inputValue: any = ""
   onClick(value: any){
-    // this.inputValue = value
-    this.inputValue.push(value)
+    this.inputValue = value
+    // this.inputValue.push(value)
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("Home OnChanges called...")
+  }
+
+  ngOnInit(): void {
+    console.log("Home OnInit called....")
+  }
+
+  ngDoCheck(): void {
+    console.log("Home DoCheck called...")
   }
 }

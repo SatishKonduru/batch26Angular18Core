@@ -9,7 +9,7 @@ import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChi
 })
 export class DemoComponent implements OnChanges, OnInit{
 @ViewChild('myMessage') myMessage: ElementRef
-@Input()  message: string[]
+@Input()  message : any
 //  constructor(){
 //   console.log("Demo Component Constructor Called.")
 //   console.log("Message Value in Demo Constructor: ", this.message)
@@ -17,12 +17,12 @@ export class DemoComponent implements OnChanges, OnInit{
 
 ngOnChanges(changes: SimpleChanges): void {
   // console.log("Message Value in Demo's OnChanges() ===> ", this.message)
-  console.log("Demo OnChanges Called....")
+  // console.log("Demo OnChanges Called....")
   // console.log("Changes: ", changes)
 }
 
 ngOnInit(): void {
-  console.log("Demo's OnInit Called....")
+  // console.log("Demo's OnInit Called....")
   // console.log("MyMessage value in Demo's OnInit: ", this.myMessage.nativeElement.innerHTML)
 }
 
