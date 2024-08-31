@@ -36,6 +36,6 @@ export class HomeComponent implements OnChanges, OnInit, DoCheck{
   }
 
   ngDoCheck(): void {
-    console.log("Home DoCheck called...")
+    // console.log("Home DoCheck called...")
   }
 }
