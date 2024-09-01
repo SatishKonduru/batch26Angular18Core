@@ -45,10 +45,12 @@
     <button mat-stroked-button (click)="onClick(input.value)">Click Me</button>
 
 
-
+@if(check < 5){
     <app-demo>
         <h3>Demo Component: This is Projecting content from HOME Component</h3>
         <p #para>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis magni est quos quo accusantium amet eaque, vel numquam praesentium temporibus architecto doloremque voluptatibus ad illum nulla, ab itaque distinctio fugit.</p>
         <h4> Input Value: {{inputValue}}</h4>
     </app-demo>
+}
+   
 </div>

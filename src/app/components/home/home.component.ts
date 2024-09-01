@@ -18,6 +18,8 @@ import {MatInputModule} from '@angular/material/input';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnChanges, OnInit, DoCheck{
+
+  check  = 0
   constructor(){
     console.log('Home Constructor called...')
   }
@@ -33,6 +35,9 @@ export class HomeComponent implements OnChanges, OnInit, DoCheck{
 
   ngOnInit(): void {
     console.log("Home OnInit called....")
+    setInterval(()=>{this.check++
+      // console.log("Check Value: ", this.check)
+    }, 1000)
   }
 
   ngDoCheck(): void {

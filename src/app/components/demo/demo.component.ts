@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { DocumentHighlights } from 'typescript';
 
 @Component({
@@ -8,7 +8,7 @@ import { DocumentHighlights } from 'typescript';
   templateUrl: './demo.component.html',
   styleUrl: './demo.component.css'
 })
-export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit{
+export class DemoComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, OnDestroy{
 @ContentChild('para') paragraph : ElementRef
 
 // @ViewChild('myMessage') myMessage: ElementRef
@@ -34,10 +34,12 @@ ngDoCheck(): void {
 }
 
 ngAfterContentInit(): void {
-  console.log("Demo's ngAfterContentInit called....")
-  console.log("In Demo's AfterContentInit value of paragaraph: ", this.paragraph.nativeElement)
+  // console.log("Demo's ngAfterContentInit called....")
+  // console.log("In Demo's AfterContentInit value of paragaraph: ", this.paragraph.nativeElement)
 }
 
-
+ngOnDestroy(): void {
+  console.log("Demo's OnDestroy hook called...")
+}
 
 }
