@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, OnChanges, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { AboutusComponent } from "../aboutus/aboutus.component";
 import { ServicesComponent } from "../services/services.component";
 import { ProductsComponent } from "../products/products.component";
@@ -9,13 +9,16 @@ import {MatButtonModule} from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { FirstComponent } from "../first/first.component";
+import { SecondComponent } from "../second/second.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AboutusComponent, ServicesComponent, ProductsComponent, CareersComponent, ContactusComponent, DemoComponent, MatButtonModule, CommonModule,MatFormFieldModule, MatInputModule ],
+  imports: [AboutusComponent, ServicesComponent, ProductsComponent, CareersComponent, ContactusComponent, DemoComponent, MatButtonModule, CommonModule, MatFormFieldModule, MatInputModule, FirstComponent, SecondComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  //  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnChanges, OnInit, DoCheck{
 
