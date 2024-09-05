@@ -5,6 +5,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,8 +23,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit{
-loginForm : any = FormGroup
+ loginForm : any = FormGroup
 formBuilder = inject(FormBuilder)
+router = inject(Router)
 
 ngOnInit(): void {
  this.loginForm =  this.formBuilder.group({
@@ -32,5 +34,16 @@ ngOnInit(): void {
   })
 }
 
+
+login(){
+  const formData = this.loginForm.value
+  console.log("Form Data: ", formData)
+  if(formData.username === 'Satish'){
+    this.router.navigate(['/userDashboard'])
+  }
+  if(formData.username === 'admin'){
+    this.router.navigate(['/adminDashboard'])
+  }
+}
 
 }
