@@ -7,8 +7,8 @@
                     <mat-label>Username: </mat-label>
                     <input matInput formControlName="username">
                     <mat-error>
-                        @if(this.loginForm.controls.username.touched && this.loginForm.controls.username.invalid){
-                            @if(this.loginForm.controls.username.errors?.required){
+                        @if(loginForm.controls.username.touched && loginForm.controls.username.invalid){
+                            @if(loginForm.controls.username.errors?.required){
                                 Username is Required
                             }
                         }
@@ -18,8 +18,8 @@
                 <mat-label>Password: </mat-label>
                 <input matInput type="password" formControlName="password">
                 <mat-error>
-                    @if(this.loginForm.controls.password.touched && this.loginForm.controls.password.invalid){
-                        @if(this.loginForm.controls.password.errors?.required){
+                    @if(loginForm.controls.password.touched && loginForm.controls.password.invalid){
+                        @if(loginForm.controls.password.errors?.required){
                             Password is Required
                         }
                     }
