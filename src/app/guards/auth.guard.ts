@@ -1,4 +1,4 @@
-import { CanActivateFn } from '@angular/router';
+import { CanActivateChildFn, CanActivateFn } from '@angular/router';
 
 export const authGuard: CanActivateFn = (route, state) => {
 
@@ -9,5 +9,9 @@ export const authGuard: CanActivateFn = (route, state) => {
   else
     return false;
 };
+
+export const authGuardChild: CanActivateChildFn = () => {
+  return false
+}
 
 

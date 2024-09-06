@@ -8,7 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
-import { authGuard } from './guards/auth.guard';
+import { authGuard, authGuardChild } from './guards/auth.guard';
+import { unsavedPageGuard } from './guards/unsaved-page.guard';
 
 export const routes: Routes = [
     {
@@ -35,6 +36,7 @@ export const routes: Routes = [
     {
         path: 'selectedCourse/:course', // Route Parameters
         component: SelectedCourseComponent,
+        canActivateChild: [authGuardChild],
         children: [
             {
                 path: 'selectedCourseDetails',
@@ -48,7 +50,8 @@ export const routes: Routes = [
     },
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+        canDeactivate: [unsavedPageGuard]
     },
     {
         path: 'userDashboard',
