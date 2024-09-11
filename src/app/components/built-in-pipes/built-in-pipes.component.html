@@ -1,0 +1,101 @@
+<div class="container">
+    <div>
+        'satish' in Uppercase: {{name | uppercase}}
+    </div>
+    
+    <div>
+        'SATISH' in Uppercase: {{name | lowercase}}
+    </div>
+
+    <div>
+        'satish konduru' in Uppercase: {{name | titlecase}}
+    </div>
+
+    <div>
+        Emp object : {{emp | json}}
+    </div>
+
+    <div>
+       1234 number in decimal: {{1234 | number: '1.3'}}
+    </div>
+
+    <div>
+        1234.56 number in decimal: {{1234.56 | number}}
+     </div>
+     <div>1234.565 number in decimal: {{1234.565 | number: '3.1-2'}}
+     </div>
+     <div>
+        0.67 number in percentage: {{ 0.67 | percent}}
+    </div>
+
+
+    <div>
+        Date: {{ todayDate }}
+    </div>
+    <div>
+        Date: {{ todayDate | date }}
+    </div>
+
+    <div>
+        Date: {{ todayDate | date: 'dd/MM/YYYY' }}
+    </div>
+
+    <div>
+        Date: {{todayDate | date: 'MM/dd/YYYY'}}
+    </div>
+
+    <div>
+        Date: {{todayDate | date:'short'}}
+    </div>
+
+    <div>
+        Date: {{todayDate | date: 'shortDate'}}
+    </div>
+
+    <div>
+        Date: {{todayDate | date: 'mediumDate'}}
+    </div>
+
+    <div>
+        Date: {{todayDate | date: 'long'}}
+    </div>
+
+     <div>
+        Date: {{todayDate | date: 'longDate'}}
+    </div>
+
+    <div>
+        Date: {{todayDate | date: 'full'}}
+    </div>
+    <div>
+        Date: {{todayDate | date: 'fullDate'}}
+    </div>
+
+    <div>
+        Date: {{todayDate | date: 'shortTime'}}
+    </div>
+
+    <div>
+        Date: {{todayDate  | date: 'mediumTime'}}
+    </div>
+
+    <div>
+        Date: {{todayDate | date: 'longTime'}}
+    </div>
+
+    <div>
+        Date: {{todayDate | date: 'fullTime'}}
+    </div>
+
+    <div>
+        25000 in Currency : {{25000 | currency}}
+    </div>
+
+    <div>
+        25000 in Indian Currency : {{25000 | currency: 'INR'}}
+    </div>
+
+    <div>
+        25000 in Euros : {{25000 | currency : 'EUR'}}
+    </div>
+</div>

@@ -10,6 +10,7 @@ import { UserDashboardComponent } from './components/user-dashboard/user-dashboa
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { authGuard, authGuardChild } from './guards/auth.guard';
 import { unsavedPageGuard } from './guards/unsaved-page.guard';
+import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 
 export const routes: Routes = [
     {
@@ -62,6 +63,10 @@ export const routes: Routes = [
         path: 'adminDashboard',
         component: AdminDashboardComponent,
         canActivate: [authGuard]
+    },
+    {
+        path: 'pipes',
+        component: BuiltInPipesComponent
     },
     {
         path: '**',

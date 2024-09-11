@@ -4,11 +4,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { BuiltInPipesComponent } from "../built-in-pipes/built-in-pipes.component";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, RouterModule],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, MatButtonModule, RouterModule, BuiltInPipesComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
   preserveWhitespaces: true
