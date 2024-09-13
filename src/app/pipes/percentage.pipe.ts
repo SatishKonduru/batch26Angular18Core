@@ -12,6 +12,7 @@ export class PercentagePipe implements PipeTransform {
   // }
 
   transform(score: any, total: any, decimal = 2) {
+    console.log("Percentage pipe Called....")
     return ( (score/total) * 100).toFixed(decimal)+'%'
   }
 
