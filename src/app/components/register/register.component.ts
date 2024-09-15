@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { MatCalendar } from '@angular/material/datepicker';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -31,4 +31,9 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class RegisterComponent {
 
+
+  onSubmit(form: NgForm){
+     console.log(form)
+    // console.log("First Name: ", form.controls['firstName'].value)
+  }
 }

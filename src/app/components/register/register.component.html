@@ -4,19 +4,24 @@
             Register (Template Driven Form)
         </mat-toolbar>
         
-         <form>
+         <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
             <!-- 1st row -->
             <div class="row d-flex mt-3">
                 <div class="col-6">
                     <mat-form-field appearance="outline" style="width:100%" >
                         <mat-label>First Name</mat-label>
-                        <input matInput placeholder="Enter First Name">
+                        <input matInput placeholder="Enter First Name" name="firstName" ngModel required>
+                        <mat-error>
+                            @if(registerForm.controls.firstName.touched){
+                                    First Name Required
+                            }
+                        </mat-error>
                     </mat-form-field>
                 </div>
                 <div class="col-6">
                     <mat-form-field appearance="outline" style="width:100%">
                         <mat-label>Last Name</mat-label>
-                        <input matInput placeholder="Enter Last Name">
+                        <input matInput placeholder="Enter Last Name" name="lastName" ngModel>
                     </mat-form-field>
                 </div>
             </div>
@@ -25,7 +30,17 @@
                 <div class="col-12">
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Email:</mat-label>
-                        <input matInput placeholder="Enter Email">
+                        <input matInput type="email" placeholder="Enter Email" name="email" ngModel required email>
+                        <mat-error>
+                            @if(registerForm.controls.email.touched){
+                                @if(registerForm.controls.email.errors?.required){
+                                    Email is Required
+                                }
+                                @if(registerForm.controls.email.errors?.email){
+                                    Invalid Email
+                                }
+                            }
+                        </mat-error>
                     </mat-form-field>
                 </div>
              </div>
@@ -34,13 +49,13 @@
                 <div class="col-6">
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Phone:</mat-label>
-                        <input matInput placeholder="Enter Phone Number">
+                        <input matInput placeholder="Enter Phone Number" name="phone" ngModel>
                     </mat-form-field>
                 </div>
                 <div class="col-6">
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Date of Birth:</mat-label>
-                        <input matInput [matDatepicker]="picker">
+                        <input matInput [matDatepicker]="picker" name="dob" ngModel>
                         <mat-hint>MM/dd/YYYY</mat-hint>
                         <mat-datepicker-toggle matTextSuffix [for]="picker"></mat-datepicker-toggle>
                         <mat-datepicker #picker></mat-datepicker>    
@@ -51,7 +66,7 @@
                <div class="row d-flex">
                 <div class="col-12">
                     <label>Gender</label>
-                    <mat-radio-group>
+                    <mat-radio-group name="gender" ngModel>
                         <mat-radio-button value="Male" checked>Male</mat-radio-button>
                         <mat-radio-button value="Female">Female</mat-radio-button>
                         <mat-radio-button value="other">Prefer Not to say</mat-radio-button>
@@ -64,7 +79,7 @@
                 <div class="col-12">
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Address 1</mat-label>
-                        <input matInput placeholder="Enter Address Line 1">
+                        <input matInput placeholder="Enter Address Line 1" name="addr1" ngModel>
                     </mat-form-field>
                 </div>
              </div>
@@ -73,7 +88,7 @@
                 <div class="col-12">
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Address 2</mat-label>
-                        <input matInput placeholder="Enter Address Line 2">
+                        <input matInput placeholder="Enter Address Line 2" name="addr2" ngModel>
                     </mat-form-field>
                 </div>
              </div>
@@ -82,7 +97,7 @@
                 <div class="col-6">
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Country:</mat-label>
-                        <mat-select>
+                        <mat-select name="country" ngModel>
                             <mat-option value="India">India</mat-option>
                             <mat-option value="USA">USA</mat-option>
                             <mat-option value="Australia">Australia</mat-option>
@@ -94,7 +109,7 @@
                 <div class="col-6">
                     <mat-form-field appearance="outline" style="width: 100%">
                         <mat-label>City:</mat-label>
-                        <input matInput placeholder="Enter City name">
+                        <input matInput placeholder="Enter City name" name="city" ngModel>
                     </mat-form-field>
                 </div>
              </div>
@@ -103,20 +118,20 @@
                 <div class="col-6">
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Region:</mat-label>
-                        <input matInput placeholder="Enter Region">
+                        <input matInput placeholder="Enter Region" name="region" ngModel>
                     </mat-form-field>
                 </div>
                 <div class="col-6">
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Postal Code:</mat-label>
-                        <input matInput placeholder="Enter Postal code">
+                        <input matInput placeholder="Enter Postal code" name="pin" ngModel>
                     </mat-form-field>
                 </div>
               </div>
               <!-- 9th row -->
                <div class="row text-center">
                 <div class="col-12">
-                    <button mat-raised-button type="submit"> Submit</button>
+                    <button mat-raised-button type="submit" [disabled]="!(registerForm.dirty && registerForm.valid)"> Register</button>
                 </div>
                </div>
          </form>
