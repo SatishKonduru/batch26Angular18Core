@@ -12,6 +12,7 @@ import { authGuard, authGuardChild } from './guards/auth.guard';
 import { unsavedPageGuard } from './guards/unsaved-page.guard';
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 
 export const routes: Routes = [
     {
@@ -53,7 +54,7 @@ export const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent,
-        canDeactivate: [unsavedPageGuard]
+        // canDeactivate: [unsavedPageGuard]
     },
     {
         path: 'userDashboard',
@@ -72,6 +73,10 @@ export const routes: Routes = [
     {
         path: 'register',
         component: RegisterComponent
+    },
+    {
+        path: 'reactiveForm',
+        component: ReactiveFormComponent
     },
     {
         path: '**',

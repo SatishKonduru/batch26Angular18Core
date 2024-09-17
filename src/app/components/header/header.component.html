@@ -3,7 +3,7 @@
     <span>Angular 18</span>
     <span class="spacer"></span>
     <span>
-        <mat-icon [routerLink]="'/register'">add</mat-icon>
+        <mat-icon  [matMenuTriggerFor]="menu">add</mat-icon>
     </span>
     <span><mat-icon [routerLink]="'/login'">login</mat-icon></span>
 </mat-toolbar>
@@ -23,3 +23,8 @@
     <span><a routerLink="home" fragment="contactus">Contactus</a></span>
 </mat-toolbar> -->
 <!-- <app-built-in-pipes></app-built-in-pipes> -->
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="'/register'"> Template Driven Forms</button>
+    <button mat-menu-item [routerLink]="'/reactiveForm'"> Reactive Forms</button>
+</mat-menu>
