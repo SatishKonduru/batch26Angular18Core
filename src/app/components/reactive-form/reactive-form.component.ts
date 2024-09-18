@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatCalendar } from '@angular/material/datepicker';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -44,8 +44,10 @@ export class ReactiveFormComponent implements OnInit{
       country: new FormControl(null),
       city: new FormControl(null),
       region: new FormControl(null),
-      pin: new FormControl(null)
+      pin: new FormControl(null),
+      
     })
+    
   }
 
 
