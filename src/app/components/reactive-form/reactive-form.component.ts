@@ -45,7 +45,11 @@ export class ReactiveFormComponent implements OnInit{
       city: new FormControl(null),
       region: new FormControl(null),
       pin: new FormControl(null),
-      
+      skills: new FormArray([
+        new FormControl(null),
+        new FormControl(null),
+    
+      ])
     })
     
   }
@@ -54,5 +58,13 @@ export class ReactiveFormComponent implements OnInit{
   onClick(){
     const formData = this.registerForm.value
     console.log("registerForm: ", formData)
+  }
+
+  addSkills(){
+    (<FormArray>this.registerForm.controls.skills).push(new FormControl(null))
+  }
+  deleteSkill(index: any){
+   const control = <FormArray>this.registerForm.controls.skills 
+   control.removeAt(index)
   }
 }

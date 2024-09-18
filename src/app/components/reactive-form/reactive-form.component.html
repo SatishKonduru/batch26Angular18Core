@@ -134,8 +134,24 @@
                     </div>
                   </div>
              
-             
-             
+             @for(control of registerForm.controls.skills['controls']; track control; let i = $index){
+                <div class="col-12 row" formArrayName="skills">
+                    <div class="col-10">
+                        <mat-form-field appearance="outline" style="width:100%">
+                            <mat-label>Skill:</mat-label>
+                            <input matInput [formControlName] = "i">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-2">
+                        <button mat-flat-button (click)="deleteSkill(i)">Delete</button>
+                    </div>
+                    
+                 </div>
+             }
+                
+             <div class="col-4">
+                <button mat-flat-button (click)="addSkills()"> Add Skill </button>
+             </div>
             
               <!-- 9th row -->
                <div class="row text-center">
