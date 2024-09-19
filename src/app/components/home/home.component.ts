@@ -12,11 +12,12 @@ import {MatInputModule} from '@angular/material/input';
 import { FirstComponent } from "../first/first.component";
 import { SecondComponent } from "../second/second.component";
 import { CustomPipeComponent } from "../custom-pipe/custom-pipe.component";
+import { SignalsComponent } from "../signals/signals.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AboutusComponent, ServicesComponent, ProductsComponent, CareersComponent, ContactusComponent, DemoComponent, MatButtonModule, CommonModule, MatFormFieldModule, MatInputModule, FirstComponent, SecondComponent, CustomPipeComponent],
+  imports: [AboutusComponent, ServicesComponent, ProductsComponent, CareersComponent, ContactusComponent, DemoComponent, MatButtonModule, CommonModule, MatFormFieldModule, MatInputModule, FirstComponent, SecondComponent, CustomPipeComponent, SignalsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   //  encapsulation: ViewEncapsulation.None
