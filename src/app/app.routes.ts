@@ -13,6 +13,7 @@ import { unsavedPageGuard } from './guards/unsaved-page.guard';
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { LazyCompComponent } from './components/lazy-comp/lazy-comp.component';
 
 export const routes: Routes = [
     {
@@ -79,6 +80,10 @@ export const routes: Routes = [
         component: ReactiveFormComponent
     },
     {
+        path: 'lazy',
+        loadComponent: () => import('./components/lazy-comp/lazy-comp.component').then(comp => comp.LazyCompComponent)
+    },
+    {i
         path: '**',
         component: PageNotFoundComponent
     }
