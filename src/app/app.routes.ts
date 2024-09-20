@@ -83,7 +83,7 @@ export const routes: Routes = [
         path: 'lazy',
         loadComponent: () => import('./components/lazy-comp/lazy-comp.component').then(comp => comp.LazyCompComponent)
     },
-    {i
+    {
         path: '**',
         component: PageNotFoundComponent
     }
