@@ -13,11 +13,13 @@ import { FirstComponent } from "../first/first.component";
 import { SecondComponent } from "../second/second.component";
 import { CustomPipeComponent } from "../custom-pipe/custom-pipe.component";
 import { SignalsComponent } from "../signals/signals.component";
+import { NgTemplateComponent } from "../ng-template/ng-template.component";
+import { NgContainerComponent } from "../ng-container/ng-container.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AboutusComponent, ServicesComponent, ProductsComponent, CareersComponent, ContactusComponent, DemoComponent, MatButtonModule, CommonModule, MatFormFieldModule, MatInputModule, FirstComponent, SecondComponent, CustomPipeComponent, SignalsComponent],
+  imports: [AboutusComponent, ServicesComponent, ProductsComponent, CareersComponent, ContactusComponent, DemoComponent, MatButtonModule, CommonModule, MatFormFieldModule, MatInputModule, FirstComponent, SecondComponent, CustomPipeComponent, SignalsComponent, NgTemplateComponent, NgContainerComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   //  encapsulation: ViewEncapsulation.None

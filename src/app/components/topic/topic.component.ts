@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import {MatDividerModule} from '@angular/material/divider';
 import { BackgroundDirective } from '../../directives/background.directive';
 
@@ -13,5 +13,6 @@ import { BackgroundDirective } from '../../directives/background.directive';
   styleUrl: './topic.component.css'
 })
 export class TopicComponent {
-@Input()  topicName: any
+// @Input()  topicName: any
+topicName = input('')
 }

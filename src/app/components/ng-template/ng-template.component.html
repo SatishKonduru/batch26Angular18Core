@@ -1,0 +1,16 @@
+
+<app-topic [topicName]="'ngTemplate'"></app-topic>
+
+<h2>We are learning NG Template</h2>
+
+<ng-template #myTemplate>
+    <h3>This is a template</h3>
+    <p>This is a para inside ng-template</p>
+</ng-template>
+
+<ng-template #newTemplate>
+    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem soluta sequi recusandae ipsum illo dolorem eveniet tenetur reprehenderit eligendi unde? Recusandae dolorum voluptatum voluptas eligendi architecto explicabo ex est magni.</h4>
+</ng-template>
+
+
+<div *ngTemplateOutlet="newTemplate"></div>
